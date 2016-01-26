@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -148,13 +149,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MUC-E7-uge">
+                                <rect key="frame" x="405" y="327" width="75" height="105"/>
+                                <color key="backgroundColor" red="0.72628045080000003" green="0.72629773620000004" blue="0.72628843779999996" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="H4j-RE-ida"/>
+                                    <constraint firstAttribute="height" constant="105" id="yEC-uP-Ejx"/>
+                                </constraints>
+                            </imageView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5d-sa-322">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TH-i8-Rqz">
                                         <rect key="frame" x="232" y="80" width="137" height="21"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="90s-aU-gmQ"/>
                                             <constraint firstAttribute="width" constant="137" id="LI2-ao-vdD"/>
+                                            <constraint firstAttribute="width" constant="137" id="rU2-fu-Mo6"/>
                                             <constraint firstAttribute="height" constant="21" id="xMa-rE-vxD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -166,6 +177,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="273" id="0P5-BK-mbY"/>
                                             <constraint firstAttribute="width" constant="399" id="bgU-Dd-dbP"/>
+                                            <constraint firstAttribute="height" constant="273" id="cGB-dA-Obw"/>
+                                            <constraint firstAttribute="width" constant="399" id="mjJ-PM-8gy"/>
                                         </constraints>
                                         <string key="text">Classic Card Matching Game:
  1. Pick two cards at a time.
@@ -178,6 +191,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWq-lG-kc4">
                                         <rect key="frame" x="254" y="462" width="92" height="30"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="92" id="MHA-Ym-xtI"/>
                                             <constraint firstAttribute="width" constant="92" id="SZL-UM-HjB"/>
                                         </constraints>
                                         <state key="normal" title="Let's Duel!"/>
@@ -188,22 +202,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="1TH-i8-Rqz" firstAttribute="top" secondItem="G5d-sa-322" secondAttribute="top" constant="80" id="Cn6-iA-I2h"/>
-                                    <constraint firstItem="hWq-lG-kc4" firstAttribute="top" secondItem="DjD-qS-zDJ" secondAttribute="bottom" constant="62" id="jWl-vY-xkN"/>
-                                    <constraint firstItem="hWq-lG-kc4" firstAttribute="centerX" secondItem="DjD-qS-zDJ" secondAttribute="centerX" id="p7O-Y1-nu5"/>
-                                    <constraint firstItem="DjD-qS-zDJ" firstAttribute="centerX" secondItem="G5d-sa-322" secondAttribute="centerX" id="plQ-Dc-uyw"/>
-                                    <constraint firstItem="DjD-qS-zDJ" firstAttribute="top" secondItem="1TH-i8-Rqz" secondAttribute="bottom" constant="26" id="pld-hp-EQg"/>
-                                    <constraint firstItem="DjD-qS-zDJ" firstAttribute="centerX" secondItem="1TH-i8-Rqz" secondAttribute="centerX" id="xVC-ci-EYA"/>
+                                    <constraint firstItem="hWq-lG-kc4" firstAttribute="top" secondItem="DjD-qS-zDJ" secondAttribute="bottom" constant="62" id="6UW-5h-VIv"/>
+                                    <constraint firstItem="DjD-qS-zDJ" firstAttribute="centerX" secondItem="1TH-i8-Rqz" secondAttribute="centerX" id="Xsd-An-wlM"/>
+                                    <constraint firstItem="hWq-lG-kc4" firstAttribute="centerX" secondItem="G5d-sa-322" secondAttribute="centerX" id="cga-3u-Say"/>
+                                    <constraint firstItem="1TH-i8-Rqz" firstAttribute="top" secondItem="G5d-sa-322" secondAttribute="top" constant="80" id="ilG-BV-iA9"/>
+                                    <constraint firstItem="DjD-qS-zDJ" firstAttribute="top" secondItem="1TH-i8-Rqz" secondAttribute="bottom" constant="26" id="vLV-aC-nxU"/>
+                                    <constraint firstItem="DjD-qS-zDJ" firstAttribute="centerX" secondItem="hWq-lG-kc4" secondAttribute="centerX" id="yIq-Ap-HtT"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MUC-E7-uge">
-                                <rect key="frame" x="405" y="327" width="75" height="105"/>
-                                <color key="backgroundColor" red="0.72628045080000003" green="0.72629773620000004" blue="0.72628843779999996" alpha="1" colorSpace="deviceRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="H4j-RE-ida"/>
-                                    <constraint firstAttribute="height" constant="105" id="yEC-uP-Ejx"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -246,14 +252,8 @@
                             <constraint firstItem="o4r-qn-m86" firstAttribute="top" secondItem="uA4-mq-hVe" secondAttribute="bottom" constant="25" id="o67-oe-vef"/>
                             <constraint firstItem="PYP-46-Igb" firstAttribute="top" secondItem="I1z-XK-cIG" secondAttribute="bottom" constant="20" id="pGY-iL-d91"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="G5d-sa-322"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="firstCard" destination="dlu-h8-kif" id="wjv-6V-Bgd"/>
                         <outlet property="instructionView" destination="G5d-sa-322" id="I5I-1v-xKW"/>
                     </connections>
                 </viewController>
